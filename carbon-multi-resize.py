@@ -18,7 +18,7 @@ WHISPER_BIN = join(ROOT_DIR, 'bin')
 
 STORAGE_SCHEMAS_CONFIG = join(ROOT_DIR, 'conf', 'storage-schemas.conf')
 
-STORAGE_AGGREGATION_CONFIG = join(ROOT_DIR, 'conf', 'storage-aggregation.condf')
+STORAGE_AGGREGATION_CONFIG = join(ROOT_DIR, 'conf', 'storage-aggregation.conf')
 
 class Schema:
   def test(self, metric):
