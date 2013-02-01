@@ -240,10 +240,14 @@ for root, dirs, files in os.walk(LOCAL_DATA_DIR):
             command_args = [WHISPER_BIN + '/whisper-resize.py', filepath]
             for (secondsPerPoint, points) in archiveConfig:
                 command_args.append("{0}:{1}".format(secondsPerPoint, points))
+
+            command_args.append('--nobackup')
+
             if aggregationMethod:
                 command_args.append('--aggregationMethod={0}'.format(aggregationMethod))
 
             if xFilesFactor:
                 command_args.append('--xFilesFactor={0}'.format(xFilesFactor))
+
             #print ' '.join(command_args)
             subprocess.check_output(command_args)
