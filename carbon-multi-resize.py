@@ -246,7 +246,7 @@ for root, dirs, files in os.walk(LOCAL_DATA_DIR):
             if aggregationMethod:
                 command_args.append('--aggregationMethod={0}'.format(aggregationMethod))
 
-            if xFilesFactor:
+            if xFilesFactor is not None:
                 command_args.append('--xFilesFactor={0}'.format(xFilesFactor))
 
             #print ' '.join(command_args)
