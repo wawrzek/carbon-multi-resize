@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import os
 from os.path import dirname, exists, join, realpath
 import re
@@ -10,7 +9,7 @@ from carbon.conf import OrderedConfigParser
 from carbon.util import pickle
 import whisper
 
-ROOT_DIR = os.environ.get('GRAPHITE_ROOT', realpath(join(dirname(__file__), '..')))
+ROOT_DIR = os.environ.get('GRAPHITE_ROOT')
 STORAGE_DIR = join(ROOT_DIR, 'storage')
 WHITELISTS_DIR = join(STORAGE_DIR, 'lists')
 LOCAL_DATA_DIR = join(STORAGE_DIR, 'whisper')
