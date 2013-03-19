@@ -2,4 +2,6 @@ This file is used to resize multiple whisper(part of graphite/carbon) files at o
 your storage-schema.conf and storage-aggregations.conf files
 
 Ensure that you are pointing to the correct locations for these files, by setting GRAPHITE_ROOT
-environment variable.
+environment variable to directory where graphite was installed (typically /opt/graphite)
+
+This script has only been tested on python >= 2.7 and graphite 0.9.10
