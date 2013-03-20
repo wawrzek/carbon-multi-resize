@@ -239,7 +239,8 @@ for root, dirs, files in os.walk(LOCAL_DATA_DIR):
         if diff_file_conf(metric, filepath):
             #there is a difference and we need to resize the whisper file
             (archiveConfig, xFilesFactor, aggregationMethod) = get_archive_config(metric)
-            command_args = [WHISPER_BIN + '/whisper-resize.py', filepath]
+            #command_args = [WHISPER_BIN + '/whisper-resize.py', filepath]
+            command_args = ['whisper-resize.py', filepath]
             for (secondsPerPoint, points) in archiveConfig:
                 command_args.append("{0}:{1}".format(secondsPerPoint, points))
 
