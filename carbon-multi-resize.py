@@ -251,5 +251,5 @@ for root, dirs, files in os.walk(LOCAL_DATA_DIR):
             if xFilesFactor is not None:
                 command_args.append('--xFilesFactor={0}'.format(xFilesFactor))
 
-            #print ' '.join(command_args)
-            subprocess.check_output(command_args)
+            print ' '.join(command_args)
+            subprocess.check_call(command_args)
