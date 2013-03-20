@@ -5,11 +5,14 @@ import re
 import subprocess
 import sys
 
+ROOT_DIR = os.environ.get('GRAPHITE_ROOT')
+
+sys.path.insert(0, ROOT_DIR + "/lib")
+
 from carbon.conf import OrderedConfigParser
 from carbon.util import pickle
 import whisper
 
-ROOT_DIR = os.environ.get('GRAPHITE_ROOT')
 STORAGE_DIR = join(ROOT_DIR, 'storage')
 WHITELISTS_DIR = join(STORAGE_DIR, 'lists')
 LOCAL_DATA_DIR = join(STORAGE_DIR, 'whisper')
