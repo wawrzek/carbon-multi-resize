@@ -7,6 +7,9 @@ import sys
 
 ROOT_DIR = os.environ.get('GRAPHITE_ROOT')
 
+if not ROOT_DIR:
+    ROOT_DIR = raw_input("Please provide thr path to GRAPHITE (i.e. /opt/graphite) #> \n")
+
 sys.path.insert(0, ROOT_DIR + "/lib")
 
 from carbon.conf import OrderedConfigParser
